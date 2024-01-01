@@ -66,7 +66,7 @@ function App() {
   <Hero></Hero>
   <Skills></Skills> 
   <NavBar />
-  <Text text="projectos"/>
+  <Text text="proyectos"/>
   <Portfolio params={newsApp}/>
   <Portfolio params={eCommerce}/>
   <Portfolio params={fractaly}/>
