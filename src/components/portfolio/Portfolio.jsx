@@ -23,18 +23,18 @@ function Portfolio({ params }) {
             <List features={list} />
           </div>
           <div className="pe-4 m-3 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mb-0">
-          {live != "" && <button
-            type="button"
+          {live != "" &&   <a href={live} target="_blank"
+            
             className="w-full mb-3 text-white bg-stone-900 border-2 border-stone-100 rounded-lg text-normal flex flex-row items-center justify-center hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50"
           >
             <span className="text-lg md:text-normal py-1 font-['Yeseva_One']">
-              <a href={link} target="_blank">
+            
               Live
-              </a>
+  
             </span>
-          </button>}
-          <button
-            type="button"
+          </a>}
+          <a href={link} target="_blank"
+
             className="w-full text-white bg-stone-900 border-2 border-stone-100 rounded-lg text-normal flex flex-row items-center justify-center hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50"
           >
             <svg
@@ -51,11 +51,10 @@ function Portfolio({ params }) {
               />
             </svg>
             <span className="text-lg md:text-normal py-1 font-['Yeseva_One']">
-              <a href={link} target="_blank">
               Repositorio
-              </a>
+             
             </span>
-          </button>
+          </a>
           </div>
       </div>
       <div className="container md:col-start-1 md:col-span-2 lg:col-start-2 lg:row-start-1">

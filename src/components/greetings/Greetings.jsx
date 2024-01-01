@@ -13,15 +13,10 @@ function Greetings() {
       setName({name: localName, exists: "true"})
     }
   }, []);
-/*
-  useEffect(() => {
-    localStorage.setItem("name", nameTest);
-  }, [name]);
 
-*/
 
-  const greeting = `Hi, I'm Joel! What is your name?`;
-  const response = "Hello, my name is";
+  const greeting = `Hola! Como es tu nombre?`;
+  const response = "Hola, mi nombre es";
   const nameOk = `Hola de nuevo`;
 
   const handleClickEnter = (e) => {
@@ -51,15 +46,15 @@ function Greetings() {
 
   switch(name.exists) {
     case "true":
-      return <div className="h-full flex items-center justify-center relative p-7">
-          <h2 className="text-slate-50 text-3xl md:text-4xl lg:text-5xl">{nameOk} <span className="text-yellow-200">{name.name}</span>! </h2> <div className="absolute end-0 bottom-0 bg-zinc-950 p-1 px-2 rounded-[10px] text-md text-green-200 m-1 cursor-pointer" onClick={handleResetName}><FontAwesomeIcon icon={faArrowRotateLeft} /></div>
+      return <div className="h-full flex items-center justify-center relative p-3 bg-stone-900 rounded-xl">
+          <h2 className="text-slate-50 text-xl sm:text-2xl md:text-3xl lg:text-4xl">{nameOk} <span className="text-yellow-200">{name.name}</span>! </h2> <div className="absolute end-0 bottom-0 bg-zinc-950 p-1 px-2 rounded-[10px] text-md text-green-200 m-1 cursor-pointer" onClick={handleResetName}><FontAwesomeIcon icon={faArrowRotateLeft} /></div>
           </div>
       break
     case "false":
-return   <div className="p-4">
-          <h2 className="text-slate-50 text-2xl lg:text-3xl pb-1">{greeting}</h2>
-          <div className="">
-            <h2 className="text-yellow-300 text-2xl lg:text-3xl pb-1 sm:pb-2">{response}</h2>
+return   <div className="h-full relative p-7 bg-stone-900 rounded-xl">
+          <h2 className="text-slate-50 text-xl md:text-2xl lg:text-3xl">{greeting}</h2>
+          <div className="lg:flex gap-3">
+            <h2 className="text-yellow-300 text-xl md:text-2xl lg:text-3xl pb-2 sm:pb-2">{response}</h2>
 
             <div className="relative grow">
               <div
@@ -80,8 +75,8 @@ return   <div className="p-4">
         </div>
             break
             case "new":
-              return <div className="h-full flex items-center justify-center relative p-7">
-              <h2 className="text-slate-50 text-3xl">Gusto en conocerte <span className="text-yellow-200">{name.name}</span>, Espero que te guste mi portafolio!</h2> <div className="absolute end-0 bottom-0 bg-zinc-950 p-1 px-2 rounded-[10px] text-md text-green-200 m-1 cursor-pointer" onClick={handleResetName}><FontAwesomeIcon icon={faArrowRotateLeft} /></div>
+              return <div className="h-full flex items-center justify-center relative p-7 bg-stone-900 rounded-xl">
+              <h2 className="text-slate-50 text-xl md:text-2xl">Gusto en conocerte <span className="text-yellow-200">{name.name}</span>, Espero que te guste mi portafolio!</h2> <div className="absolute end-0 bottom-0 bg-zinc-950 p-1 px-2 rounded-[10px] text-md text-green-200 m-1 cursor-pointer" onClick={handleResetName}><FontAwesomeIcon icon={faArrowRotateLeft} /></div>
               </div>
 
       }
