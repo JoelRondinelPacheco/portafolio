@@ -1,0 +1,15 @@
+.profileCard {
+    max-width: 150px;
+}
+
+@media(max-width: 640px) {
+    .profileCard {
+        max-width: 100px;
+    }
+}
+
+@media(min-width: 640px) {
+    .profileCard {
+        max-width: 100px;
+    }
+}
