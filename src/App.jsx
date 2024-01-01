@@ -32,7 +32,7 @@ function App() {
   }
 
   const eCommerce = {
-    list: ["Registro de usuarios", "Autenticación y autorización con JSON Web Tokens", "Agregar y editar productos con ajuste de stock", "Carrito de compras por usuario", "Administración de categorías"],
+    list: ["Registro de usuarios", "Autenticación y autorización con JSON Web Tokens", "Agregar y editar productos con ajuste de stock", "Carrito de compras por usuario", "Administración de categorías", "Documentación"],
     title: "E-Commerce REST API",
     subtitle: "",
     images: [Api1, Api2, Api3],
@@ -68,8 +68,8 @@ function App() {
   <NavBar />
   <Text text="proyectos"/>
   <Portfolio params={newsApp}/>
-  <Portfolio params={eCommerce}/>
   <Portfolio params={fractaly}/>
+  <Portfolio params={eCommerce}/>
   <Portfolio params={aTuServicio}/>
   <Footer />
   </section>
