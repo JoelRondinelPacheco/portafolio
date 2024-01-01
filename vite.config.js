@@ -12,4 +12,5 @@ export default defineConfig({
       },
     }
   )],
+  base: 'https://joelrondinelpacheco.github.io/portafolio',
 })
