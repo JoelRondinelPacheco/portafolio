@@ -10,7 +10,7 @@ function Portfolio({ params }) {
   return (
     <div className="pb-4">
     <section className="rounded-xl bg-stone-900 p-4 mx-4 md:grid md:grid-cols-2 lg:grid-cols-[2fr_3fr]">
-      <div className="md:col-start-1 md:col-span-1 lg:row-start-1 relative">
+      <div className="md:col-start-1 md:col-span-1 lg:row-start-1 relative pe-2">
           <div>
             <h3 className="font-['Yeseva_One'] text-slate-50 text-3xl">
               {title}

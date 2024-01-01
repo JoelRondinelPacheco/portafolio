@@ -22,7 +22,7 @@ import Footer from './components/footer/Footer'
 function App() {
 
   const newsApp = {
-    list: ["Registro de usuarios", "Envio de emails", "Creacion y edicion de noticias", "Panel de administrador", "Comentarios, likes y denuncias"],
+    list: ["Registro de usuarios", "Envio de emails", "Creación y edición de noticias", "Panel de administrador", "Cambio de roles", "Comentarios, likes y reportes"],
     title: "NewsApp",
     subtitle: "Content System Manager",
     images: [News1, News2, News3],
@@ -32,7 +32,7 @@ function App() {
   }
 
   const eCommerce = {
-    list: ["Registro de usuarios", "Autenticacion y autorizacion con JsonWebTokens", "el codigo de encriptacion", "Agregar y editar productos con ajuste de stock", "Carrito de compras por usuario", "Administracion de categorias"],
+    list: ["Registro de usuarios", "Autenticación y autorización con JSON Web Tokens", "Agregar y editar productos con ajuste de stock", "Carrito de compras por usuario", "Administración de categorías"],
     title: "E-Commerce REST API",
     subtitle: "",
     images: [Api1, Api2, Api3],
@@ -42,7 +42,7 @@ function App() {
   }
 
   const fractaly = {
-    list: ["Paleta de paleta de colores", "Modificacion de parametros", "Navegacion (zoom y desplazamiento)", "Descarga de imagenes generadas"],
+    list: ["Paleta de paleta de colores", "Modificación de parámetros", "Navegación (zoom y desplazamiento)", "Descarga de imágenes generadas"],
     title: "Fractaly",
     subtitle: "Generador de fractales",
     images: [F1, F2, F3],
@@ -52,7 +52,7 @@ function App() {
   }
 
   const aTuServicio = {
-    list: ["Registro de usuarios", "Panel de administrador", "Ofrecer y contratar servicios", "Busqueda de servicios", "Puntiacion y comentarios"],
+    list: ["Registro de usuarios", "Panel de administrador", "Ofrecer y contratar servicios", "Busqueda de servicios", "Puntuación y comentarios"],
     title: "Atuservicio",
     subtitle: "Una plataforma para buscar/ofrecer servicios",
     images: [Serv1, Serv2, Serv3],
