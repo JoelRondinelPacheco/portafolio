@@ -22,7 +22,7 @@ import Footer from './components/footer/Footer'
 function App() {
 
   const newsApp = {
-    list: ["Registro de usuarios", "Envio de emails", "Creación y edición de noticias", "Panel de administrador", "Cambio de roles", "Comentarios, likes y reportes"],
+    list: ["User registration", "Email delivery", "Creation and editing of news", "Administrator panel", "Role change", "Comments, likes, and reports"],
     title: "NewsApp",
     subtitle: "Content System Manager",
     images: [News1, News2, News3],
@@ -32,7 +32,7 @@ function App() {
   }
 
   const eCommerce = {
-    list: ["Registro de usuarios", "Autenticación y autorización con JSON Web Tokens", "Agregar y editar productos con ajuste de stock", "Carrito de compras por usuario", "Administración de categorías", "Documentación"],
+    list: ["User registration", "Authentication and authorization with JSON Web Tokens", "Addition and editing of products with stock adjustment", "User shopping cart", "Category management", "Documentation"],
     title: "E-Commerce REST API",
     subtitle: "",
     images: [Api1, Api2, Api3],
@@ -42,9 +42,9 @@ function App() {
   }
 
   const fractaly = {
-    list: ["Paleta de paleta de colores", "Modificación de parámetros", "Navegación (zoom y desplazamiento)", "Descarga de imágenes generadas"],
+    list:["Color palette", "Parameter modification", "Navigation (zoom and pan)", "Download of generated images"],
     title: "Fractaly",
-    subtitle: "Generador de fractales",
+    subtitle: "Fractal generator",
     images: [F1, F2, F3],
     tools: ["HTML", "CSS", "JavaScript"],
     link: "https://github.com/JoelRondinelPacheco/Fractals",
@@ -52,9 +52,9 @@ function App() {
   }
 
   const aTuServicio = {
-    list: ["Registro de usuarios", "Panel de administrador", "Ofrecer y contratar servicios", "Busqueda de servicios", "Puntuación y comentarios"],
+    list: ["User registration", "Administrator panel", "Offering and hiring services", "Service search", "Rating and comments"],
     title: "Atuservicio",
-    subtitle: "Una plataforma para buscar/ofrecer servicios",
+    subtitle: "A platform for searching/offering services",
     images: [Serv1, Serv2, Serv3],
     tools: ["Java", "Spring", "Spring Security", "Thymeleaf", "Jpa", "MySQL", "JavaScript", "HTML", "CSS","Bootstrap"],
     link: "https://github.com/JoelRondinelPacheco/atuservicio",

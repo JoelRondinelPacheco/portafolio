@@ -51,7 +51,7 @@ function Portfolio({ params }) {
               />
             </svg>
             <span className="text-lg md:text-normal py-1 font-['Yeseva_One']">
-              Repositorio
+              Repository
              
             </span>
           </a>

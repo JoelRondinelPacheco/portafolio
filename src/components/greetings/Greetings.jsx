@@ -15,9 +15,9 @@ function Greetings() {
   }, []);
 
 
-  const greeting = `Hola! Como es tu nombre?`;
-  const response = "Hola, mi nombre es";
-  const nameOk = `Hola de nuevo`;
+  const greeting = `Hello! What is your name?`;
+  const response = "Hello, my name is";
+  const nameOk = `Hello again`;
 
   const handleClickEnter = (e) => {
     selectName();
@@ -76,7 +76,7 @@ return   <div className="h-full relative p-7 bg-stone-900 rounded-xl">
             break
             case "new":
               return <div className="h-full flex items-center justify-center relative p-7 bg-stone-900 rounded-xl">
-              <h2 className="text-slate-50 text-xl md:text-2xl">Gusto en conocerte <span className="text-yellow-200">{name.name}</span>! Espero que te guste mi portafolio!</h2> <div className="absolute end-0 bottom-0 bg-zinc-950 p-1 px-2 rounded-[10px] text-md text-green-200 m-1 cursor-pointer" onClick={handleResetName}><FontAwesomeIcon icon={faArrowRotateLeft} /></div>
+              <h2 className="text-slate-50 text-xl md:text-2xl">Nice to meet you <span className="text-yellow-200">{name.name}</span>! I hope you like my portfolio!</h2> <div className="absolute end-0 bottom-0 bg-zinc-950 p-1 px-2 rounded-[10px] text-md text-green-200 m-1 cursor-pointer" onClick={handleResetName}><FontAwesomeIcon icon={faArrowRotateLeft} /></div>
               </div>
 
       }
