@@ -70,7 +70,6 @@ function App() {
   <Portfolio params={newsApp}/>
   <Portfolio params={fractaly}/>
   <Portfolio params={eCommerce}/>
-  <Portfolio params={aTuServicio}/>
   <Footer />
   </section>
   )
