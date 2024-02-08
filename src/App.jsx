@@ -24,7 +24,7 @@ function App() {
   const newsApp = {
     list: ["User registration", "Email delivery", "Creation and editing of news", "Administrator panel", "Role change", "Comments, likes, and reports"],
     title: "NewsApp",
-    subtitle: "Content System Manager",
+    subtitle: "Content Management System",
     images: [News1, News2, News3],
     tools: ["Java", "Spring", "Spring Security", "Thymeleaf", "Jpa", "MySQL", "JavaScript", "HTML", "CSS","Bootstrap"],
     link: "https://github.com/JoelRondinelPacheco/newsapp",
