@@ -17,9 +17,24 @@ import F3 from './assets/img/fractaly/f3.png'
 import Serv1 from './assets/img/atuservicio/serv1.png'
 import Serv2 from './assets/img/atuservicio/serv2.png'
 import Serv3 from './assets/img/atuservicio/serv3.png'
+import Tt01 from './assets/img/todoturismo/tt01.png'
+import Tt02 from './assets/img/todoturismo/tt02.png'
+import Tt03 from './assets/img/todoturismo/tt03.png'
 import Footer from './components/footer/Footer'
 
 function App() {
+
+  const TodoTurismo = {
+    list: ["Authentication", "Email delivery", "User panels by role", "Dark/Light mode"],
+    title: "TodoTurismo",
+    subtitle: "System management for a tourism agency",
+    images: [Tt01, Tt02, Tt03],
+    tools: ["Java", "Spring", "Jpa", "MySQL", "JavaScript", "React", "HTML", "CSS","Tailwind"],
+    repository: "",
+    backend: "https://github.com/JoelRondinelPacheco/hc-v2-backend",
+    frontend: "https://github.com/JoelRondinelPacheco/hc-v2-front",
+    live: ""
+  }
 
   const newsApp = {
     list: ["User registration", "Email delivery", "Creation and editing of news", "Administrator panel", "Role change", "Comments, likes, and reports"],
@@ -27,7 +42,9 @@ function App() {
     subtitle: "Content Management System",
     images: [News1, News2, News3],
     tools: ["Java", "Spring", "Spring Security", "Thymeleaf", "Jpa", "MySQL", "JavaScript", "HTML", "CSS","Bootstrap"],
-    link: "https://github.com/JoelRondinelPacheco/newsapp",
+    repository: "https://github.com/JoelRondinelPacheco/newsapp",
+    backend: "",
+    frontend: "",
     live: ""
   }
 
@@ -37,7 +54,9 @@ function App() {
     subtitle: "",
     images: [Api1, Api2, Api3],
     tools: ["Java", "Spring", "Spring Security", "Thymeleaf", "Jpa", "MySQL", "JavaScript", "HTML", "CSS","Bootstrap"],
-    link: "https://github.com/JoelRondinelPacheco/SpringAPITodoCode",
+    repository: "https://github.com/JoelRondinelPacheco/SpringAPITodoCode",
+    backend: "",
+    frontend: "",
     live: ""
   }
 
@@ -47,7 +66,9 @@ function App() {
     subtitle: "Fractal generator",
     images: [F1, F2, F3],
     tools: ["HTML", "CSS", "JavaScript"],
-    link: "https://github.com/JoelRondinelPacheco/Fractals",
+    repository: "https://github.com/JoelRondinelPacheco/Fractals",
+    backend: "",
+    frontend: "",
     live: "https://joelrondinelpacheco.github.io/Fractals/"
   }
 
@@ -57,7 +78,9 @@ function App() {
     subtitle: "A platform for searching/offering services",
     images: [Serv1, Serv2, Serv3],
     tools: ["Java", "Spring", "Spring Security", "Thymeleaf", "Jpa", "MySQL", "JavaScript", "HTML", "CSS","Bootstrap"],
-    link: "https://github.com/JoelRondinelPacheco/atuservicio",
+    repository: "https://github.com/JoelRondinelPacheco/atuservicio",
+    backend: "",
+    frontend: "",
     live: ""
   }
 
@@ -67,6 +90,7 @@ function App() {
   <Skills></Skills> 
   <NavBar />
   <Text text="projects"/>
+  <Portfolio params={TodoTurismo}/>
   <Portfolio params={newsApp}/>
   <Portfolio params={fractaly}/>
   <Portfolio params={eCommerce}/>
