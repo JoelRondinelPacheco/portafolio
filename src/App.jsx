@@ -89,6 +89,7 @@ function App() {
   <Hero></Hero>
   <Skills></Skills> 
   <NavBar />
+  <h2 className="text-slate-50 text-4xl flex justify-between font-['Yeseva_One'] sm:text-6xl md:text-7xl lg:text-8xl tracking-[100px]">WORK</h2>
   <Text text="projects"/>
   <Portfolio params={TodoTurismo}/>
   <Portfolio params={newsApp}/>
