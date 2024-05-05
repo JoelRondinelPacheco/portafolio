@@ -8,13 +8,25 @@ import HTML from '../../assets/img/icons/html.svg'
 import MySQL from '../../assets/img/icons/mysql.svg'
 import ReactIcon from '../../assets/img/icons/react.svg'
 import Git from '../../assets/img/social/git.svg'
+import styles from './styles.module.css'
+import ContactCard from '../contact-card/contact-card'
 
 function Skills() {
 
   return (
-    <section className='bg-stone-900 rounded-xl flex flex-wrap justify-between mx-4 p-4 gap-2 md:p-5 lg:p-6'>
+    <section className={styles.skillsContainer}>
+            <div className={styles.grandientContainer}></div>
+
+      <div className={styles.iconsWrapper}>
+        <ContactCard type="Java" />
+        <ContactCard type="Java" />
+        <ContactCard type="Java" />
+        <ContactCard type="Java" />
+        <ContactCard type="Java" />
+        <ContactCard type="Java" />
+      </div>
         
-        <Java/>
+        {/* <Java/>
         <Spring/>
         <MySQL/>
         <JavaScript/>
@@ -23,7 +35,7 @@ function Skills() {
         <Bootstrap/>
         <ReactIcon/>
         <Git/>
-
+*/}
        </section>
   )
 }

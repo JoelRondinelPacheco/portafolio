@@ -4,7 +4,8 @@ import { RenderInfo } from './render-info';
 import { setColors } from './set-colors';
 import { renderizarCanvas } from './renderizarCanvas';
 
-export default function Canvas () {
+export default function Canvas ({...props}) {
+    const {width, height} = props
     const canvasRef = useRef();
     const colors = [
         { r: 0, g: 0, b: 0 },
@@ -28,8 +29,8 @@ export default function Canvas () {
       
 
     const colorsRender = setColors(colors, 85)
-    const coordinates = new Coordinates(400, 400, 4.6);
-    const renderInfo = new RenderInfo(0.5, 0.3, 80, colorsRender);
+    const coordinates = new Coordinates(width, height, 7, -1.8);
+    const renderInfo = new RenderInfo(0.3, 0.5, 50, colorsRender);
 
       const draw = (context) => {
 
@@ -38,24 +39,22 @@ export default function Canvas () {
     useEffect(() => {
         const canvas = canvasRef.current;
         const context = canvas.getContext('2d');
-        canvas.width = 400
-        canvas.height = 400
+        canvas.width = width
+        canvas.height = height
         let datosImage = context.getImageData(0, 0, canvas.width, canvas.height)
         let data = datosImage.data
         let animationId;
         datosImage.setData = renderizarCanvas(coordinates, renderInfo, 100, data);
-        context.putImageData(datosImage, 0, 0)
-
+    
         const render = () => {
-            renderInfo.real = Number(mapValues(mouseX, 0, window.innerWidth, 0.3, 0.6).toFixed(3))*(1.2)
-            renderInfo.imaginary = Number(mapValues(mouseY, 0, window.innerHeight, 0.1, 0.6).toFixed(3))*(1.2)
-            console.log(renderInfo.real, renderInfo.imaginary)
+            renderInfo.real = mouseX ? Number(mapValues(mouseX, 0, Number(window.innerWidth), 0.3, 0.6).toFixed(3))*(1.2) : 0.36
+            renderInfo.imaginary = mouseY ? Number(mapValues(mouseY, 0, Number(window.innerHeight), 0.1, 0.6).toFixed(3))*(1.2) : 0.4
             datosImage.setData = renderizarCanvas(coordinates, renderInfo, 100, data);
             context.putImageData(datosImage, 0, 0);
             animationId = requestAnimationFrame(render)
         }
 
-        render();
+     //  render();
 
         return () => window.cancelAnimationFrame(animationId)
         

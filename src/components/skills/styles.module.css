@@ -1,0 +1,15 @@
+.skillsContainer {
+    display: flex;
+    gap: 24px
+}
+
+.grandientContainer {
+    border-radius: 16px;
+    width: 100%;
+    background-image: linear-gradient(to right, #9876E0 3%, #4DE56C);
+}
+
+.iconsWrapper {
+    display: flex;
+    gap: 24px;
+}

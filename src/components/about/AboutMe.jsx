@@ -1,13 +1,29 @@
-import React from 'react'
-
+import ContactCard from "../contact-card/contact-card";
+import styles from "./styles.module.css";
+//Web developer with strong skills in creating dynamic and functional web applications.
 function AboutMe() {
   return (
-    <section className='bg-stone-900 p-5 h-full rounded-xl p-4 flex items-center justify-center'>
-    <h4 className='text-slate-50 text-normal md:text-lg'>
-    Web developer with strong skills in creating dynamic and functional web applications.
-      </h4>
+    <section className={styles.aboutMeWrapper}>
+      <div className={styles.contactWrapper}>
+        <div className={`${styles.getInTouch} kanit-regular`}>
+          <p>GET IN TOUCH</p>
+        </div>
+        <ContactCard type="Email" />
+        <ContactCard type="Linkedin" />
+        <ContactCard type="GitHub" />
+        <ContactCard type="CV" />
+      </div>
+      <div className={styles.gradientWrapper}>
+        <div></div>
+      </div>
+      <div className={styles.aboutMeTextWrapper}>
+        <h4 className="">
+          Web developer with strong skills in creating dynamic and functional
+          web applications.
+        </h4>
+      </div>
     </section>
-  )
+  );
 }
 
-export default AboutMe
+export default AboutMe;

@@ -3,7 +3,7 @@ import React from "react";
 function NavBar() {
   return (
     <section>
-      <div class="flex flex-wrap m-4 gap-2">
+      <div className="flex flex-wrap m-4 gap-2">
         <a
         href="mailto:joel.rondinel.pacheco@gmail.com" target="_blank"
           className="text-center py-1 grow text-slate-50 text-normal md:text-xl hover:text-yellow-300 bg-stone-900 border-stone-100 rounded-lg hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50"

@@ -21,6 +21,7 @@ import Tt01 from './assets/img/todoturismo/tt01.png'
 import Tt02 from './assets/img/todoturismo/tt02.png'
 import Tt03 from './assets/img/todoturismo/tt03.png'
 import Footer from './components/footer/Footer'
+import AboutMe from './components/about/AboutMe'
 
 function App() {
 
@@ -87,6 +88,7 @@ function App() {
   return (
     <section className='bg-zinc-950 container mx-auto'>
   <Hero></Hero>
+  <AboutMe />
   <Skills></Skills> 
   <NavBar />
   <h2 className="text-slate-50 text-4xl flex justify-between font-['Yeseva_One'] sm:text-6xl md:text-7xl lg:text-8xl tracking-[100px]">WORK</h2>
