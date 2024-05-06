@@ -20,7 +20,6 @@ function Hero() {
     })
 
   }, [])
-console.log(canvasSize)
 
 
   return (

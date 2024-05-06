@@ -3,38 +3,31 @@
     --rotate-icon: -90deg;
     
 }
-.container {
-    display: flex;
-    justify-content: center;
-    padding: 56px 0;
-}
 
-.skill {
-    color: white
-}
 .skillContainer {
-    --width: 130px;
-}
-.wrapper > h2 {
-    color: white;
-    position: absolute;
-    bottom: 50%;
-    left: 5%;
-    translate:  0 80%;
-    font-size: 200px;
-    color: rgb(216, 216, 216);
-    z-index: 5;
-    rotate: 30deg;
+    --width: 100px;
 }
 
 .wrapper {
     position: relative;
-        --size: 300px;
-    width: var(--size);
-    height: var(--size);    
-    rotate: -30deg;
+    margin-left: 600px;
+    display: inline-block;
+    --size: 300px;
+
 }
 
+.mainCircle {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 6px solid rgb(216, 216, 216);
+    z-index: 2;
+    
+}
+
+.mainCircle:hover {
+    background-color: red;
+}
 
 
 
@@ -50,8 +43,14 @@
 
   .skillContainer:hover {
     scale: 1.1;
+    background-color: blue;
   }
-
+  .textRingBA {
+    /*
+    Rota el container del skill
+    puede rotar segun el index*/
+    rotate: 80deg;
+  }
   
 
   .skillContainer {
@@ -59,14 +58,14 @@
     color: red;
     width: var(--width);
     height: var(--width);;
-   border-radius: 50%;
+    border-radius: 50%;
     background-color: blue;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-/*letras*/
+
   .skillContainer [style*=--index] {
     padding-top: calc(var(--width) + 1.8rem);
     font-size: calc(var(--font-size, 2) * 1rem);
@@ -76,7 +75,7 @@
     left: 50%;
     transform: 
         translate(-50%, -50%)
-        rotate(calc(var(--index) * (-7) * var(--font-size, 2)))        
+        rotate(calc(var(--index) * (-8) * var(--font-size, 2)))        
         ;
 
 /*      
@@ -85,7 +84,9 @@ translate(-50%, -50%);
       rotate(calc(-60deg / var(--total-b) * var(--index-b)))
       translateY(calc(var(--radius-b, 5) * 1ch));*/
   }
-  .translateSkill {
+
+
+.translateSkill {
     position: absolute;
     bottom: 50%;
     right: 50%;

@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 //Web developer with strong skills in creating dynamic and functional web applications.
 function AboutMe() {
   return (
-    <section className={styles.aboutMeWrapper}>
+    <section className={`${styles.aboutMeWrapper} vieport-wrapper`}>
       <div className={styles.contactWrapper}>
         <div className={`${styles.getInTouch} kanit-regular`}>
           <p>GET IN TOUCH</p>
