@@ -53,8 +53,8 @@ export default function Canvas ({...props}) {
             context.putImageData(datosImage, 0, 0);
             animationId = requestAnimationFrame(render)
         }
-
-     //  render();
+        // activar o descativar
+       render();
 
         return () => window.cancelAnimationFrame(animationId)
         

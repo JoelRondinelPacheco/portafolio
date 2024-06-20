@@ -47,11 +47,12 @@
     padding-bottom: 8px;
 }
 
-.inputNameContainer > input {
+.inputNameContainer div > input {
     width: 100%;
     padding: 8px 16px;
     border-radius: 8px;
     background-color: rgb(207, 207, 207);
+    padding-right: 50px;
 }
 
 

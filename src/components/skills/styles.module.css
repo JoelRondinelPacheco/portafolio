@@ -13,7 +13,7 @@
     color: white
 }
 .skillContainer {
-    --width: 130px;
+    --width: 110px;
 }
 .wrapper > h2 {
     color: white;
@@ -56,11 +56,11 @@
 
   .skillContainer {
     position: relative;
-    color: red;
+    color: rgb(201, 199, 199);
     width: var(--width);
     height: var(--width);;
    border-radius: 50%;
-    background-color: blue;
+    background-image: linear-gradient( hsl(239, 76%, 27%), hsl(240, 50%, 52%));
     display: flex;
     justify-content: center;
     align-items: center;

@@ -6,6 +6,9 @@
 @tailwind utilities;
 
 :root {
+  --toastify-text-color-success: #a6ca8e;
+    --toastify-color-success: #252525;
+    --toastify-color-info: #a3b36c;
     --color-background-hero: #252525;
     --color-white: rgb(212, 212, 212);
 

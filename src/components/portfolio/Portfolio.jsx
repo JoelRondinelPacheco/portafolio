@@ -4,45 +4,39 @@ import List from "./utils/List";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCertificate } from "@fortawesome/free-solid-svg-icons";
 import Carousel from "../carousel/Carousel";
-import LinkRepo from "./utils/LinkRepo";
+import LinkRepo from "./link-repo/LinkRepo";
+
 
 function Portfolio({ params }) {
-  const { list, title, subtitle, images, tools, repository, backend, frontend, live } = params;
+  const { list, title, subtitle, images, tools, backendRepo, frontendRepo, liveFront, liveBack } = params;
+  function linksAvailable(repo, live) {
+    return repo !== "" || live !== ""
+  }
   return (
     <div className="pb-4">
       <section className="rounded-xl bg-stone-900 p-4 mx-4 md:grid md:grid-cols-2 lg:grid-cols-[2fr_3fr]">
-        <div className="md:col-start-1 md:col-span-1 lg:row-start-1 relative pe-2">
+        <div className="md:col-start-1 md:col-span-1 lg:row-start-1 relative p-4">
           <div>
-            <h3 className="font-['Yeseva_One'] text-slate-50 text-3xl">
+            <h3 className={`kanit-medium text-slate-50 text-4xl`}>
               {title}
             </h3>
-            <h3 className="font-['Yeseva_One'] text-slate-50 text-2xl ps-2 pb-1">
+            <h3 className="kanit-regular text-slate-50 text-2xl ps-2 pb-1">
               {subtitle}
             </h3>
           </div>
-          <div className="ps-3">
+          <div className="ps-4 pt-2">
             <List features={list} />
           </div>
           <div className="pe-4 m-3 lg:absolute lg:inset-x-0 lg:bottom-0 lg:mb-0 space-y-4">
-            {live != "" && (
-             <LinkRepo link={live} text="Live" />
-            )}
+            {/*Boton con repo primero, despues live*/}
             {
-              repository != "" && (
-                <LinkRepo link={repository} text="Repository" />
-              )
-            }
-
-{
-              frontend != "" && (
-                <LinkRepo link={frontend} text="FrontEnd" />
-              )
+              linksAvailable(backendRepo, liveBack) && <LinkRepo repo={backendRepo} live={liveBack} type="Backend"/>
             }
             {
-              backend != "" && (
-                <LinkRepo link={backend} text="BackEnd" />
-              )
+              linksAvailable(frontendRepo, liveFront) &&<LinkRepo repo={frontendRepo} live={liveFront} type="Frontend"/>
             }
+            
+            
 
           </div>
         </div>

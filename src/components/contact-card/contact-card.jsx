@@ -1,3 +1,5 @@
+import { ToastContainer, toast } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 import styles from './styles.module.css';
 
 function linkedin ()  {
@@ -12,21 +14,71 @@ function email() {
     )
 }
 
-const ContactCard = ({...props}) => {
-    const { type, icon } = props
+function github () {
+    return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 24"><path d="M5 3h14a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4.44c-.32-.07-.33-.68-.33-.89l.01-2.47c0-.84-.29-1.39-.61-1.67c2.01-.22 4.11-.97 4.11-4.44c0-.98-.35-1.79-.92-2.42c.09-.22.4-1.14-.09-2.38c0 0-.76-.23-2.48.93c-.72-.2-1.48-.3-2.25-.31c-.76.01-1.54.11-2.25.31c-1.72-1.16-2.48-.93-2.48-.93c-.49 1.24-.18 2.16-.09 2.38c-.57.63-.92 1.44-.92 2.42c0 3.47 2.1 4.22 4.1 4.47c-.26.2-.49.6-.57 1.18c-.52.23-1.82.63-2.62-.75c0 0-.48-.86-1.38-.93c0 0-.88 0-.06.55c0 0 .59.28 1 1.32c0 0 .52 1.75 3.03 1.21l.01 1.53c0 .21-.02.82-.34.89H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" fill="currentColor"/></svg>
+    )
+}
 
-    function getIcon(iconType) {
-        switch (iconType) {
-            case "Linkedin":
-                return linkedin();
-            case "Email":
-                return email();
-            default:
-                return linkedin();
-        }
-
+function getIcon(iconType) {
+    switch (iconType) {
+        case "Linkedin":
+            return linkedin();
+        case "Email":
+            return email();
+        case "GitHub":
+            return github();
+        default:
+            return linkedin();
     }
 
+}
+
+const ContactCard = ({...props}) => {
+    const { type, link } = props
+
+    
+
+    const copyEmail =async () => {
+            try {
+                await navigator.clipboard.writeText("joel.rondinel.pacheco@gmail.com")
+                console.log("asd")
+                toast.success("Copied to Clipboard!")
+            } catch (err) {
+                console.error("Unable to copy to clipboard");
+            }
+    }
+
+    return (<>
+
+<ToastContainer
+      position="bottom-center"
+      autoClose={1500}
+      hideProgressBar
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+    />
+        { link !== "copy" 
+        ?   <a href={link} target='_blank'>
+                {children(type)}
+            </a>
+        : <div onClick={copyEmail}>
+            
+                {children(type)}
+            
+        </div>
+        
+        }
+        </>
+    )
+}
+
+function children(type) {
     return (
         <div className={`${styles.cardWrapper} kanit-regular`}>
             <div>{getIcon(type)}</div>

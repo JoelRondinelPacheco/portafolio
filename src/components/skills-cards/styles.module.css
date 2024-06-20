@@ -1,0 +1,14 @@
+.skillsWraper {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cardFinal {
+    flex-grow: 1;
+}
+
+.skillName {
+    color: white;
+    padding: 4px;
+}
