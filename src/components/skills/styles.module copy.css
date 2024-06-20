@@ -1,0 +1,96 @@
+.iconContainer {
+    --rotate-i-text: 40deg;
+    --rotate-icon: -90deg;
+    
+}
+
+.skillContainer {
+    --width: 100px;
+}
+
+.wrapper {
+    position: relative;
+    margin-left: 600px;
+    display: inline-block;
+    --size: 300px;
+
+}
+
+.mainCircle {
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    border: 6px solid rgb(216, 216, 216);
+    z-index: 2;
+    
+}
+
+.mainCircle:hover {
+    background-color: red;
+}
+
+
+
+.textRingBC {
+    rotate: 45deg
+  }
+.skillContainer {
+    transition: scale .25s ease-in-out;
+
+}
+
+
+
+  .skillContainer:hover {
+    scale: 1.1;
+    background-color: blue;
+  }
+  .textRingBA {
+    /*
+    Rota el container del skill
+    puede rotar segun el index*/
+    rotate: 80deg;
+  }
+  
+
+  .skillContainer {
+    position: relative;
+    color: red;
+    width: var(--width);
+    height: var(--width);;
+    border-radius: 50%;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .skillContainer [style*=--index] {
+    padding-top: calc(var(--width) + 1.8rem);
+    font-size: calc(var(--font-size, 2) * 1rem);
+    position: absolute;
+    transform-origin: 50% 50%;
+    top: 50%;
+    left: 50%;
+    transform: 
+        translate(-50%, -50%)
+        rotate(calc(var(--index) * (-8) * var(--font-size, 2)))        
+        ;
+
+/*      
+rotate(calc((360 / var(--font-size-b, 3))*var(--total-b) / var(--total-b) * var(--index-b)))
+translate(-50%, -50%);
+      rotate(calc(-60deg / var(--total-b) * var(--index-b)))
+      translateY(calc(var(--radius-b, 5) * 1ch));*/
+  }
+
+
+.translateSkill {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    padding-top: calc((var(--size) / 2) + 2rem);
+    transform-origin: 50% 0;
+    translate: 50% 100%;
+}

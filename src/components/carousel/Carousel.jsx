@@ -31,8 +31,7 @@ function Carousel({images}) {
         <div className="absolute bottom-4 right-0 left-0">
             <div className="flex items-center justify-center gap-2">
                 {images.map((indicator, i) => {
-                    console.log(i)
-                return <div className={`transition-all w-3 h-3 bg-stone-900 rounded-full border border-slate-50 ${current === i ? "p-2" : "bg-opacity-80"}`}></div>
+                return <div key={i} className={`transition-all w-3 h-3 bg-stone-900 rounded-full border border-slate-50 ${current === i ? "p-2" : "bg-opacity-80"}`}></div>
 })}
             </div>
         </div>
