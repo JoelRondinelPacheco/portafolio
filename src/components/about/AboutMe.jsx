@@ -22,7 +22,7 @@ function AboutMe() {
       </div>
       <div className={styles.aboutMeTextWrapper}>
         <h4 className="">
-        
+        Hello! I'm a Java developer with expertise in Spring and SQL. I have a strong foundation in object-oriented programming, a deep understanding of UML, and proficiency in implementing hexagonal architecture.
         </h4>
       </div>
       <div className={`${styles.skillsWrapper} ${styles.topMargin}`}>

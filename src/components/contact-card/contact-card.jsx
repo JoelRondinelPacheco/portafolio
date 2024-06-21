@@ -50,7 +50,9 @@ const ContactCard = ({...props}) => {
     }
 
     return (<>
+{link === "copy" &&
 
+<div className='hidden'>
 <ToastContainer
       position="bottom-center"
       autoClose={1500}
@@ -63,6 +65,8 @@ const ContactCard = ({...props}) => {
       pauseOnHover
       theme="colored"
     />
+    </div>
+    }
         { link !== "copy" 
         ?   <a href={link} target='_blank'>
                 {children(type)}
