@@ -44,9 +44,7 @@ function Hero() {
   }
 
   const handleKeyUp = (e) => {
-    console.log(e)
     if (e.key === 'Enter') {
-      console.log("guardo")
       confirmName(inputName)
     }
   }

@@ -159,7 +159,7 @@ function App() {
   };
 
   return (
-    <section className="bg-zinc-950 container mx-auto max-w-screen-xl">
+    <section className="bg-zinc-950 container mx-auto max-w-screen-xl vieport-wrapper">
       <Hero />
       <AboutMe />
       
