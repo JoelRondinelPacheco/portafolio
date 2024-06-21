@@ -1,3 +1,5 @@
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import ContactCard from "../contact-card/contact-card";
 import SkillsPill from "../skills-pill/SkillsPill";
 import Docker from "../skills-pill/icons/Docker";
@@ -32,6 +34,19 @@ function AboutMe() {
         <SkillsPill><p>Docker</p><Docker /></SkillsPill>
       </div>
       <div className={`${styles.subgradientWrapper} ${styles.topMargin}`}></div>
+      <ToastContainer
+      position="bottom-center"
+      autoClose={1500}
+      hideProgressBar
+      newestOnTop={false}
+      closeOnClick
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="colored"
+    />
+
     </section>
   );
 }
