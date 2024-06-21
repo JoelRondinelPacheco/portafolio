@@ -67,7 +67,7 @@
 .contactWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
+  gap: 16px;
 }
 .getInTouch {
   grid-column: span 1;

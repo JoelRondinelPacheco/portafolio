@@ -42,7 +42,6 @@ const ContactCard = ({...props}) => {
     const copyEmail =async () => {
             try {
                 await navigator.clipboard.writeText("joel.rondinel.pacheco@gmail.com")
-                console.log("asd")
                 toast.success("Copied to Clipboard!")
             } catch (err) {
                 console.error("Unable to copy to clipboard");
@@ -50,23 +49,6 @@ const ContactCard = ({...props}) => {
     }
 
     return (<>
-{link === "copy" &&
-
-<div className='hidden'>
-<ToastContainer
-      position="bottom-center"
-      autoClose={1500}
-      hideProgressBar
-      newestOnTop={false}
-      closeOnClick
-      rtl={false}
-      pauseOnFocusLoss
-      draggable
-      pauseOnHover
-      theme="colored"
-    />
-    </div>
-    }
         { link !== "copy" 
         ?   <a href={link} target='_blank'>
                 {children(type)}
