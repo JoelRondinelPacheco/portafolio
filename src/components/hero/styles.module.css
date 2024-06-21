@@ -6,6 +6,8 @@
     padding: 24px;
     min-height: 75vh;
     overflow: hidden;
+    border-radius: 16px;
+    margin-bottom: 16px;
 }
 
 .infoWrapper {
@@ -29,12 +31,12 @@
 }
 
 .aboutMeContainer > p {
-    font-size: 22px;
+    font-size: 26px;
     color: rgb(255, 255, 164)
 }
 
 .aboutMeContainer > h2 {
-    font-size: 48px;
+    font-size: 32px;
     color: rgb(226, 226, 226);
     line-height: 48px;
 }
