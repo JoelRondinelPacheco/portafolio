@@ -11,20 +11,14 @@ function check () {
 }
 
 function List({ features }) {
-  //    <div className="bg-zinc-950 rounded-full  text-normal p-2 w-[25px] h-[25px] inline-flex items-center justify-center">
   return (
     <section>
       <ul className="text-slate-50">
         {features.map((feature, i) => {
-
           return (
             <li key={i} className="flex gap-2 content-center items-center pb-1">
-              {/*<div className="bg-zinc-950 rounded-full  text-normal p-2 w-[25px] h-[25px] inline-flex items-center justify-center">
-                <FontAwesomeIcon icon={faCheck} size="sm"/>
-                
-              </div>*/}
               {check()}
-              <span className=" text-xl">{feature}</span>
+              <span className=" text-lg sm:text-xl">{feature}</span>
             </li>
           );
         })}
