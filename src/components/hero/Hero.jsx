@@ -63,7 +63,7 @@ function Hero() {
         </div>
         <div className={styles.aboutMeContainer}>
           <p>Joel Rondinel Pacheco </p>
-          <h2 className={`kanit-regular`}>BACKEND DEVELOPER</h2>
+          <h2 className={`kanit-regular`}>SOFTWARE DEVELOPER</h2>
         </div>
         <div>
           {
