@@ -1,0 +1,18 @@
+.container {
+    transition: all .5s ease;
+    overflow: visible;
+}
+
+.container:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+
+}
+
+.widthMin {
+    width: 25%;
+}
+
+.widthMax {
+    width: 100%;
+}
